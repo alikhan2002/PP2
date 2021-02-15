@@ -1,0 +1,12 @@
+n=int(input())
+x=1
+y=0
+i=0
+j=1
+while(i<len(str(n))):
+    z=int((n/j))%10
+    j*=10
+    x*=z
+    y+=z
+    i+=1
+print(x-y)

@@ -1,0 +1,5 @@
+a=int(input())
+b=int(input())
+l=int(input())
+z=int(a/2)+int(b/2)+int(l/2)
+print(int(a%2+b%2+l%2+z))

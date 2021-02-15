@@ -1,0 +1,5 @@
+a=int(input())
+b=int(input())
+l=int(input())
+n=int(input())
+print(int(((a*(n-1)+a/2)+(b*(n-1))+l)*2))
