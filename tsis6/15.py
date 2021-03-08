@@ -1,4 +1,8 @@
-l=[]
-for i in range(1,31):
-    l.append(i*i)
-print(l)
+import re
+s=input()
+x=re.findall(r'[a-z]*',s)
+x.sort()
+t=list(filter(lambda e: e!='', x))
+g='-'.join(t)
+for i in g:
+    print(i,end='')
