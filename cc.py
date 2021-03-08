@@ -1,11 +1,10 @@
 import re
+file = open('check.txt','r')
+# text = file.read()
+# pattern = r"\nБИН.*(?P<BIN>\b[0-9]+).*\nНДС.*(?P<NDS>\b[0-9]+)"
 
-file = open('ch.txt','r')
-text = file.read()
+# x = re.compile(pattern)
 
-pattern = r"\nБИН.*(?P<BIN>\b[0-9]+).*\nНДС.*(?P<NDS>\b[0-9]+)"
-
-x = re.compile(pattern)
-
-for match in x.finditer(text):
-    print(match)
+# for match in x.finditer(text):
+#     print(match)
+print (file.read())

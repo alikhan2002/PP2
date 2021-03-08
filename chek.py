@@ -1,9 +1,5 @@
-import re 
-# import codecs
-# fileObj = codecs.open( "ch.txt", "r", "utf_8_sig" )
-# text = fileObj.read() # или читайте по строке
-
-file=open("C:\\python\\PP2\\w4\\bill.txt","r")
+import re
+file=open("bill.data","r", encoding='utf-8')
 text=file.read()
 Binpattern=r"\nБИН.*(?P<BIN>\b\d+)"
 Ndspattern=r"\nНДС Серия.*(?P<NDS>\b\d+)"

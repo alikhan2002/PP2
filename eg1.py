@@ -9,3 +9,6 @@ if x:
   print("YES! We have a match!")
 else:
   print("No match")
+
+KASSAPattern=r"\nКАССА.*(?P<KASSA>\b[0-9,-]+"
+KASSAText=re.search(KASSAPattern,text)
