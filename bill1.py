@@ -24,9 +24,9 @@ ADRESSText = re.search(ADRESSPattern, text).group("Adress")
 itemPatternText=r"(?P<name>.*)\n{1}(?P<count>.*)x(?P<price>.*)\n{1}(?P<total1>.*)\n{1}Стоимость\n{1}(?P<total2>)"
 itemPattern=re.compile(itemPatternText)
 
-item=[["БИН","НДС","ЗНМ","Касса","Чек","Наименование товара","Цена за единиц","Кол-во","Дата и Время", "Адрес"]]
+item=[["БИН","НДС","ЗНМ","Касса","Чек","Наименование товара","Цена за единиц","Кол-во","Сумма","Дата и Время", "Адрес"]]
 for i in re.finditer(itemPatternText, text):
-    item.append([BINText, NDSText, ZNMText, KASSAText, CHEKText, i.group("name"), i.group("price"), i.group("count"), DATAVREMYAText,ADRESSText])
+    item.append([BINText, NDSText, ZNMText, KASSAText, CHEKText, i.group("name"), i.group("price"),i.group("total1"), i.group("count"), DATAVREMYAText,ADRESSText])
 
 with open("files.csv",'w',newline='') as f:
     writer=csv.writer(f)
